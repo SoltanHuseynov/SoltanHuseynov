@@ -4,3 +4,5 @@
 - 👀 I’m interested in Web develper and AI technology
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=SoltanHuseynov&theme=dark&border_radius=4.6)](https://git.io/streak-stats)
+
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=SoltanHuseynov&theme=dark)
