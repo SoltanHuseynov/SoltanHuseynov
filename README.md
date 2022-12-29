@@ -5,7 +5,9 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=SoltanHuseynov&theme=dark&border_radius=4.6)](https://git.io/streak-stats)
 
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=SoltanHuseynov&theme=dark)
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=SoltanHuseynov&theme=dark) 
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SoltanHuseynov&layout=compact&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 ## Skills
 
