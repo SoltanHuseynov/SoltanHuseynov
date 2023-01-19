@@ -45,7 +45,7 @@
       <a href="https://www.mongodb.com/home"><img src="https://img.icons8.com/color/512/mongodb.png" width=50/></a>
       <a href="https://en.wikipedia.org/wiki/NoSQL"><img src="https://ourcodeworld.com/public-media/articles/articleocw-5d78ebb022d1e.webp" width=50/></a>
       <a href="https://www.postgresql.org/"><img src="https://img.icons8.com/color/512/postgreesql.png" width=50/></a>
-      <a href="https://www.postgresql.org/"><img src="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/firebase/images/lockup.svg" width=100/></a>
+      <a href="https://firebase.google.com/community/learn"><img src="https://www.gstatic.com/devrel-devsite/prod/vdbc400b97a86c8815ab6ee057e8dc91626aee8cf89b10f7d89037e5a33539f53/firebase/images/lockup.svg" width=100/></a>
     </div><br>
 
 
