@@ -104,8 +104,8 @@ export default function Home() {
         <ModernAbout
           bio={[
             "Mən gözəl, funksional və istifadəçi yönümlü rəqəmsal təcrübələr yaratmağı sevən həvəsli bir full-stack proqramçıyam. Frontend və backend texnologiyalarında təcrübəm var, fikirləri təmiz və səmərəli kodla həyata keçirirəm.",
-            "Proqram inkişafındakı səyahətim məni müxtəlif maraqlı layihələrə apardı - miqyaslana bilən API-lərdən tutmuş intuitiv istifadəçi interfeyslərinin yaradılmasına qədər. Texnologiyanın real problemləri həll etmək və insanların həyatını yaxşılaşdırmaq gücünə inanıram.",
-            "Kod yazmadığım zaman, yeni texnologiyaları araşdırır, açıq mənbə layihələrinə töhfə verir və ya proqramçı icması ilə bilik paylaşıram. Həmişə yeni çağırışları qəbul etməyə və mümkün olanın sərhədlərini genişləndirməyə həvəsliyəm.",
+            "Mən mobil tətbiqlərin inkişafı, proqram mühəndisliyi, sistem administrasiyası və texniki dəstəkdə praktik təcrübəsi olan IT mütəxəssisisiyəm. Real layihələrdə işləmək, API inteqrasiyası, verilənlər bazasının idarə edilməsi və UI/UX prinsiplərinə uyğun tətbiqlərin inkişafı üçün lazımi bacarıqlara sahibəm.",
+            "Qrupla işləmə, analitik düşüncə və operativ problemlərin həlli ilə dəyər yaradan nəticələrə fokus edirəm. Kod yazmadığım zaman, yeni texnologiyaları araşdırır, açıq mənbə layihələrinə töhfə verir və ya proqramçı icması ilə bilik paylaşıram. Həmişə yeni çağırışları qəbul etməyə və mümkün olanın sərhədlərini genişləndirməyə həvəsliyəm.",
           ]}
           skills={[
             "JavaScript",
