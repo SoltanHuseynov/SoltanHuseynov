@@ -26,6 +26,16 @@ export function ModernHero({
     document.getElementById("featured")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const downloadCV = () => {
+    const cvPath = "/cv/CV.pdf";
+    const link = document.createElement("a");
+    link.href = cvPath;
+    link.download = "SoltanHuseynov-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -107,7 +117,7 @@ export function ModernHero({
             Layihələrə Bax
             <ArrowDown className="ml-2 h-4 w-4" />
           </Button>
-          <Button size="lg" variant="outline" data-testid="button-download-resume">
+          <Button size="lg" variant="outline" onClick={downloadCV} data-testid="button-download-resume">
             <Download className="mr-2 h-4 w-4" />
             CV Yüklə
           </Button>
