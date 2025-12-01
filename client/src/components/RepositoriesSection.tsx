@@ -42,14 +42,14 @@ export function RepositoriesSection({ repositories, isLoading }: RepositoriesSec
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold" data-testid="text-repos-heading">
-            GitHub Repositories
+            GitHub Repozitoriyaları
           </h2>
 
           <Tabs value={sortBy} onValueChange={(v) => setSortBy(v as SortOption)}>
             <TabsList data-testid="tabs-sort">
-              <TabsTrigger value="stars" data-testid="tab-sort-stars">Stars</TabsTrigger>
-              <TabsTrigger value="updated" data-testid="tab-sort-updated">Recently Updated</TabsTrigger>
-              <TabsTrigger value="name" data-testid="tab-sort-name">Alphabetical</TabsTrigger>
+              <TabsTrigger value="stars" data-testid="tab-sort-stars">Ulduzlar</TabsTrigger>
+              <TabsTrigger value="updated" data-testid="tab-sort-updated">Son Yenilənən</TabsTrigger>
+              <TabsTrigger value="name" data-testid="tab-sort-name">Əlifba</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
@@ -70,7 +70,7 @@ export function RepositoriesSection({ repositories, isLoading }: RepositoriesSec
           </div>
         ) : sortedRepos.length === 0 ? (
           <div className="text-center py-12 text-muted-foreground" data-testid="text-no-repos">
-            No repositories found
+            Repozitoriya tapılmadı
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

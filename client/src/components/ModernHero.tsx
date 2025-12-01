@@ -72,7 +72,7 @@ export function ModernHero({
         <motion.div variants={itemVariants} className="mb-4">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
             <Sparkles className="w-4 h-4" />
-            Available for new opportunities
+            Yeni imkanlar üçün açığam
           </span>
         </motion.div>
 
@@ -104,12 +104,12 @@ export function ModernHero({
 
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-4 mb-12">
           <Button size="lg" onClick={scrollToProjects} data-testid="button-view-projects">
-            View Projects
+            Layihələrə Bax
             <ArrowDown className="ml-2 h-4 w-4" />
           </Button>
           <Button size="lg" variant="outline" data-testid="button-download-resume">
             <Download className="mr-2 h-4 w-4" />
-            Download CV
+            CV Yüklə
           </Button>
         </motion.div>
 
@@ -117,7 +117,7 @@ export function ModernHero({
           {githubUrl && (
             <motion.div whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button variant="ghost" size="icon" className="w-12 h-12 rounded-full" asChild data-testid="link-github">
-                <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profili">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -126,7 +126,7 @@ export function ModernHero({
           {linkedinUrl && (
             <motion.div whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button variant="ghost" size="icon" className="w-12 h-12 rounded-full" asChild data-testid="link-linkedin">
-                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profili">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
@@ -135,7 +135,7 @@ export function ModernHero({
           {email && (
             <motion.div whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}>
               <Button variant="ghost" size="icon" className="w-12 h-12 rounded-full" asChild data-testid="link-email">
-                <a href={`mailto:${email}`} aria-label="Send Email">
+                <a href={`mailto:${email}`} aria-label="E-poçt Göndər">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>

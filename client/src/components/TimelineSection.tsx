@@ -12,26 +12,26 @@ interface TimelineItem {
 const defaultTimeline: TimelineItem[] = [
   {
     year: "2024",
-    title: "Senior Developer",
-    description: "Leading development of complex web applications and mentoring junior developers.",
+    title: "Böyük Proqramçı",
+    description: "Mürəkkəb veb tətbiqlərin inkişafına rəhbərlik edirəm və kiçik proqramçılara mentorluq edirəm.",
     icon: "work",
   },
   {
     year: "2023",
-    title: "Full-Stack Developer",
-    description: "Building modern web applications using React, Node.js, and cloud technologies.",
+    title: "Full-Stack Proqramçı",
+    description: "React, Node.js və bulud texnologiyalarından istifadə edərək müasir veb tətbiqlər yaradıram.",
     icon: "work",
   },
   {
     year: "2022",
-    title: "Open Source Contributor",
-    description: "Started contributing to major open source projects and building my own tools.",
+    title: "Açıq Mənbə Əməkdaşı",
+    description: "Böyük açıq mənbə layihələrinə töhfə verməyə və öz alətlərimi yaratmağa başladım.",
     icon: "project",
   },
   {
     year: "2021",
-    title: "Junior Developer",
-    description: "Began my professional journey in software development, focusing on frontend technologies.",
+    title: "Kiçik Proqramçı",
+    description: "Proqram təminatı inkişafında peşəkar yolçuluğuma başladım, frontend texnologiyalarına fokuslandım.",
     icon: "work",
   },
 ];
@@ -53,10 +53,10 @@ export function TimelineSection({ timeline = defaultTimeline }: TimelineSectionP
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center" data-testid="text-timeline-heading">
-            My Journey
+            Mənim Yolçuluğum
           </h2>
           <p className="text-muted-foreground text-lg mb-12 text-center max-w-2xl mx-auto">
-            A timeline of my professional growth and key milestones.
+            Peşəkar inkişafım və əsas nailiyyətlərimin xronologiyası.
           </p>
         </AnimatedSection>
 

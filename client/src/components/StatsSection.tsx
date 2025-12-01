@@ -35,10 +35,10 @@ function AnimatedCounter({ value, duration = 2 }: { value: number; duration?: nu
 
 export function StatsSection({ totalRepos, totalStars, totalOrgs, languages }: StatsSectionProps) {
   const stats = [
-    { icon: GitBranch, label: "Repositories", value: totalRepos, color: "text-blue-500" },
-    { icon: Star, label: "Total Stars", value: totalStars, color: "text-yellow-500" },
-    { icon: Users, label: "Organizations", value: totalOrgs, color: "text-green-500" },
-    { icon: Code2, label: "Languages", value: languages.length, color: "text-purple-500" },
+    { icon: GitBranch, label: "Repozitoriyalar", value: totalRepos, color: "text-blue-500" },
+    { icon: Star, label: "Ulduzlar", value: totalStars, color: "text-yellow-500" },
+    { icon: Users, label: "Təşkilatlar", value: totalOrgs, color: "text-green-500" },
+    { icon: Code2, label: "Dillər", value: languages.length, color: "text-purple-500" },
   ];
 
   return (

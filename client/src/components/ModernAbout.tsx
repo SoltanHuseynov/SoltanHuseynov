@@ -35,10 +35,10 @@ export function ModernAbout({ bio, skills }: ModernAboutProps) {
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-about-heading">
-            About Me
+            Haqqımda
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            Get to know more about who I am and what I do.
+            Mən kimim və nə işlə məşğulam haqqında daha çox məlumat əldə edin.
           </p>
         </AnimatedSection>
 
@@ -73,9 +73,9 @@ export function ModernAbout({ bio, skills }: ModernAboutProps) {
             >
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  { label: "Years Experience", value: "4+" },
-                  { label: "Projects Completed", value: "50+" },
-                  { label: "Happy Clients", value: "30+" },
+                  { label: "Təcrübə İli", value: "4+" },
+                  { label: "Tamamlanmış Layihələr", value: "50+" },
+                  { label: "Məmnun Müştərilər", value: "30+" },
                 ].map((stat, index) => (
                   <div key={stat.label} className="text-center p-4 rounded-xl bg-muted/50">
                     <div className="text-3xl font-bold text-primary">{stat.value}</div>
@@ -94,7 +94,7 @@ export function ModernAbout({ bio, skills }: ModernAboutProps) {
             className="lg:col-span-2"
           >
             <h3 className="text-xl font-semibold mb-6" data-testid="text-skills-heading">
-              Tech Stack
+              Texnologiyalar
             </h3>
             <div className="flex flex-wrap gap-3">
               {skills.map((skill, index) => {

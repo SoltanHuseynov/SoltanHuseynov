@@ -55,7 +55,7 @@ export default function Home() {
     queryKey: ["/api/github/orgs"],
   });
 
-  const displayName = user?.name || user?.login || "Developer";
+  const displayName = user?.name || user?.login || "Proqramçı";
   const githubUrl = user?.html_url || "https://github.com";
 
   const totalStars = repos?.reduce((acc, repo) => acc + repo.stargazers_count, 0) || 0;
@@ -68,7 +68,7 @@ export default function Home() {
     .map((repo) => ({
       id: repo.id,
       name: repo.name,
-      description: repo.description || "No description available",
+      description: repo.description || "Təsvir mövcud deyil",
       language: repo.language,
       stars: repo.stargazers_count,
       forks: repo.forks_count,
@@ -83,10 +83,10 @@ export default function Home() {
       <main>
         <ModernHero
           name={displayName}
-          title="Full-Stack Developer"
+          title="Full-Stack Proqramçı"
           tagline={
             user?.bio ||
-            "Crafting elegant solutions to complex problems. I specialize in building modern, scalable web applications with cutting-edge technologies."
+            "Mürəkkəb problemlərə zərif həllər yaradıram. Müasir texnologiyalarla miqyaslana bilən veb tətbiqlər qurmaqda ixtisaslaşmışam."
           }
           avatarUrl={user?.avatar_url}
           githubUrl={githubUrl}
@@ -98,14 +98,14 @@ export default function Home() {
           totalRepos={repos?.length || 0}
           totalStars={totalStars}
           totalOrgs={orgs?.length || 0}
-          languages={languages as string[]}
+          languages={languages}
         />
 
         <ModernAbout
           bio={[
-            "I'm a passionate full-stack developer with a love for creating beautiful, functional, and user-centered digital experiences. With expertise spanning frontend and backend technologies, I bring ideas to life through clean, efficient code.",
-            "My journey in software development has led me through various exciting projects, from building scalable APIs to crafting intuitive user interfaces. I believe in the power of technology to solve real-world problems and make people's lives better.",
-            "When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or sharing knowledge with the developer community. I'm always eager to take on new challenges and push the boundaries of what's possible.",
+            "Mən gözəl, funksional və istifadəçi yönümlü rəqəmsal təcrübələr yaratmağı sevən həvəsli bir full-stack proqramçıyam. Frontend və backend texnologiyalarında təcrübəm var, fikirləri təmiz və səmərəli kodla həyata keçirirəm.",
+            "Proqram inkişafındakı səyahətim məni müxtəlif maraqlı layihələrə apardı - miqyaslana bilən API-lərdən tutmuş intuitiv istifadəçi interfeyslərinin yaradılmasına qədər. Texnologiyanın real problemləri həll etmək və insanların həyatını yaxşılaşdırmaq gücünə inanıram.",
+            "Kod yazmadığım zaman, yeni texnologiyaları araşdırır, açıq mənbə layihələrinə töhfə verir və ya proqramçı icması ilə bilik paylaşıram. Həmişə yeni çağırışları qəbul etməyə və mümkün olanın sərhədlərini genişləndirməyə həvəsliyəm.",
           ]}
           skills={[
             "JavaScript",
@@ -131,8 +131,8 @@ export default function Home() {
             { name: "Python", level: 78, color: "#3572A5" },
             { name: "PostgreSQL & MongoDB", level: 82, color: "#336791" },
             { name: "Docker & DevOps", level: 70, color: "#2496ed" },
-            { name: "Cloud Services (AWS)", level: 72, color: "#FF9900" },
-            { name: "UI/UX Design", level: 75, color: "#FF61F6" },
+            { name: "Bulud Xidmətləri (AWS)", level: 72, color: "#FF9900" },
+            { name: "UI/UX Dizayn", level: 75, color: "#FF61F6" },
           ]}
         />
 

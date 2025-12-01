@@ -43,10 +43,10 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-featured-heading">
-            Featured Projects
+            Seçilmiş Layihələr
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            A selection of my most popular repositories and projects I'm proud of.
+            Ən populyar repozitoriyalarım və fəxr etdiyim layihələrdən seçmələr.
           </p>
         </AnimatedSection>
 
@@ -72,7 +72,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label={`View ${project.name} on GitHub`}
+                        aria-label={`${project.name} GitHub-da bax`}
                       >
                         <Github className="w-5 h-5" />
                       </a>
@@ -80,7 +80,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
                   </div>
 
                   <p className="text-muted-foreground flex-1 mb-4">
-                    {project.description || "No description available"}
+                    {project.description || "Təsvir mövcud deyil"}
                   </p>
 
                   {project.topics && project.topics.length > 0 && (
@@ -116,7 +116,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
                     <Button variant="ghost" size="sm" asChild>
                       <a href={project.url} target="_blank" rel="noopener noreferrer">
-                        View
+                        Bax
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
                     </Button>

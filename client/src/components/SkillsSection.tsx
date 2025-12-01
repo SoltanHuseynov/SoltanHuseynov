@@ -28,10 +28,10 @@ export function SkillsSection({ skills = defaultSkills }: SkillsSectionProps) {
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-skills-heading">
-            Skills & Expertise
+            Bacarıqlar və Təcrübə
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            Technologies I've been working with and my proficiency level in each.
+            İşlədiyim texnologiyalar və hər birindəki səviyyəm.
           </p>
         </AnimatedSection>
 

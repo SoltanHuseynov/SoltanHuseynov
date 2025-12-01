@@ -36,14 +36,14 @@ export function OrganizationCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors shrink-0"
-                aria-label={`Visit ${login} organization`}
+                aria-label={`${login} təşkilatına keçid`}
                 data-testid={`link-org-${login}`}
               >
                 <ExternalLink className="h-4 w-4" />
               </a>
             </div>
             <p className="text-sm text-muted-foreground line-clamp-2 mt-1" data-testid={`text-org-desc-${login}`}>
-              {description || "No description available"}
+              {description || "Təsvir mövcud deyil"}
             </p>
           </div>
         </div>

@@ -55,7 +55,7 @@ export function RepositoryCard({
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors shrink-0"
-          aria-label={`Open ${name} repository`}
+          aria-label={`${name} repozitoriyasını aç`}
           data-testid={`link-repo-${name}`}
         >
           <ExternalLink className="h-4 w-4" />
@@ -63,7 +63,7 @@ export function RepositoryCard({
       </CardHeader>
       <CardContent className="flex flex-col flex-1 gap-4">
         <p className="text-sm text-muted-foreground line-clamp-3 flex-1" data-testid={`text-repo-desc-${name}`}>
-          {description || "No description provided"}
+          {description || "Təsvir mövcud deyil"}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
@@ -89,7 +89,7 @@ export function RepositoryCard({
         </div>
 
         <p className="text-xs text-muted-foreground" data-testid={`text-repo-updated-${name}`}>
-          Updated {formatDistanceToNow(new Date(updatedAt), { addSuffix: true })}
+          {formatDistanceToNow(new Date(updatedAt), { addSuffix: true })} əvvəl yeniləndi
         </p>
       </CardContent>
     </Card>

@@ -9,11 +9,11 @@ interface ModernHeaderProps {
 }
 
 const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#featured" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Contact", href: "#contact" },
+  { label: "Haqqımda", href: "#about" },
+  { label: "Bacarıqlar", href: "#skills" },
+  { label: "Layihələr", href: "#featured" },
+  { label: "Təcrübə", href: "#timeline" },
+  { label: "Əlaqə", href: "#contact" },
 ];
 
 export function ModernHeader({ name }: ModernHeaderProps) {

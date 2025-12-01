@@ -26,7 +26,7 @@ export function OrganizationsSection({ organizations, isLoading }: Organizations
         <div className="flex items-center gap-3 mb-12">
           <Building2 className="h-8 w-8 text-muted-foreground" />
           <h2 className="text-4xl md:text-5xl font-bold" data-testid="text-orgs-heading">
-            Organizations
+            Təşkilatlar
           </h2>
         </div>
 

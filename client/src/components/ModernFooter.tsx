@@ -28,7 +28,7 @@ export function ModernFooter({ name, email, githubUrl, linkedinUrl }: ModernFoot
           >
             <h3 className="text-2xl font-bold mb-2">{name}</h3>
             <p className="text-muted-foreground">
-              Building digital experiences that matter.
+              Əhəmiyyətli rəqəmsal təcrübələr yaradıram.
             </p>
           </motion.div>
 
@@ -60,7 +60,7 @@ export function ModernFooter({ name, email, githubUrl, linkedinUrl }: ModernFoot
             {email && (
               <motion.div whileHover={{ scale: 1.1, y: -2 }}>
                 <Button variant="ghost" size="icon" asChild data-testid="footer-link-email">
-                  <a href={`mailto:${email}`} aria-label="Email">
+                  <a href={`mailto:${email}`} aria-label="E-poçt">
                     <Mail className="h-5 w-5" />
                   </a>
                 </Button>
@@ -94,17 +94,17 @@ export function ModernFooter({ name, email, githubUrl, linkedinUrl }: ModernFoot
           className="mt-12 pt-8 border-t text-center"
         >
           <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground mb-2">
-            <span>Made with</span>
+            <span>Sevgi ilə hazırlandı</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
               <Heart className="h-4 w-4 text-red-500 fill-current" />
             </motion.div>
-            <span>by {name}</span>
+            <span>{name} tərəfindən</span>
           </div>
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} All rights reserved.
+            © {new Date().getFullYear()} Bütün hüquqlar qorunur.
           </p>
         </motion.div>
       </div>

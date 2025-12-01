@@ -24,8 +24,8 @@ export function ContactSection() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
     toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Mesaj göndərildi!",
+      description: "Əlaqə saxladığınız üçün təşəkkür edirəm. Tezliklə cavab verəcəyəm.",
     });
     
     setFormData({ name: "", email: "", message: "" });
@@ -33,9 +33,9 @@ export function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "hello@example.com" },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
+    { icon: Mail, label: "E-poçt", value: "hello@example.com" },
+    { icon: MapPin, label: "Məkan", value: "Bakı, Azərbaycan" },
+    { icon: Phone, label: "Telefon", value: "+994 (50) 123-45-67" },
   ];
 
   return (
@@ -43,10 +43,10 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center" data-testid="text-contact-heading">
-            Get In Touch
+            Əlaqə
           </h2>
           <p className="text-muted-foreground text-lg mb-12 text-center max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+            Layihəniz var və ya əməkdaşlıq etmək istəyirsiniz? Sizdən eşitməkdən məmnun olaram.
           </p>
         </AnimatedSection>
 
@@ -59,11 +59,11 @@ export function ContactSection() {
           >
             <Card className="h-full">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+                <h3 className="text-2xl font-semibold mb-6">Mesaj Göndər</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Input
-                      placeholder="Your Name"
+                      placeholder="Adınız"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
@@ -73,7 +73,7 @@ export function ContactSection() {
                   <div>
                     <Input
                       type="email"
-                      placeholder="Your Email"
+                      placeholder="E-poçtunuz"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
@@ -82,7 +82,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <Textarea
-                      placeholder="Your Message"
+                      placeholder="Mesajınız"
                       rows={5}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -100,7 +100,7 @@ export function ContactSection() {
                     ) : (
                       <>
                         <Send className="w-4 h-4 mr-2" />
-                        Send Message
+                        Mesaj Göndər
                       </>
                     )}
                   </Button>
@@ -138,9 +138,9 @@ export function ContactSection() {
             </div>
 
             <div className="mt-12 p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-2xl">
-              <h4 className="font-semibold mb-2">Let's build something amazing together</h4>
+              <h4 className="font-semibold mb-2">Gəlin birlikdə möhtəşəm bir şey quraq</h4>
               <p className="text-sm text-muted-foreground">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                Mən həmişə yeni layihələri, yaradıcı fikirləri və ya viziyanızın bir hissəsi olmaq imkanlarını müzakirə etməyə açığam.
               </p>
             </div>
           </motion.div>
