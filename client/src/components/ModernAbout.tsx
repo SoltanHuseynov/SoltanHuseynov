@@ -34,12 +34,9 @@ export function ModernAbout({ bio, skills }: ModernAboutProps) {
     <section className="py-16 md:py-24 px-6 md:px-8" id="about" data-testid="section-about">
       <div className="max-w-7xl mx-auto">
         <AnimatedSection>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-about-heading">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12" data-testid="text-about-heading">
             Haqqımda
           </h2>
-          <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            Mən kimim və nə işlə məşğulam haqqında daha çox məlumat əldə edin.
-          </p>
         </AnimatedSection>
 
         <div className="grid lg:grid-cols-5 gap-12">
