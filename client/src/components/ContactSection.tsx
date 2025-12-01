@@ -33,9 +33,9 @@ export function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "E-poçt", value: "hello@example.com" },
+    { icon: Mail, label: "E-poçt", value: "sultan.huseynov20@gmail.com" },
     { icon: MapPin, label: "Məkan", value: "Bakı, Azərbaycan" },
-    { icon: Phone, label: "Telefon", value: "+994 (50) 123-45-67" },
+    { icon: Phone, label: "Telefon", value: "+994 (50) 329-19-55" },
   ];
 
   return (

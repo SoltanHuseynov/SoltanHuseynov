@@ -90,8 +90,8 @@ export default function Home() {
           }
           avatarUrl={user?.avatar_url}
           githubUrl={githubUrl}
-          linkedinUrl="https://linkedin.com"
-          email="hello@example.com"
+          linkedinUrl="https://www.linkedin.com/in/soltanhuseynov/"
+          email="sultan.huseynov20@gmail.com"
         />
 
         <StatsSection
@@ -170,9 +170,9 @@ export default function Home() {
 
         <ModernFooter
           name={displayName}
-          email="hello@example.com"
+          email="sultan.huseynov20@gmail.com"
           githubUrl={githubUrl}
-          linkedinUrl="https://linkedin.com"
+          linkedinUrl="https://www.linkedin.com/in/soltanhuseynov/"
         />
       </main>
     </div>
