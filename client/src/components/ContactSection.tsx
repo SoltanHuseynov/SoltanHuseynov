@@ -136,13 +136,6 @@ export function ContactSection() {
                 </motion.div>
               ))}
             </div>
-
-            <div className="mt-12 p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-2xl">
-              <h4 className="font-semibold mb-2">Gəlin birlikdə möhtəşəm bir şey quraq</h4>
-              <p className="text-sm text-muted-foreground">
-                Mən həmişə yeni layihələri, yaradıcı fikirləri və ya viziyanızın bir hissəsi olmaq imkanlarını müzakirə etməyə açığam.
-              </p>
-            </div>
           </motion.div>
         </div>
       </div>
