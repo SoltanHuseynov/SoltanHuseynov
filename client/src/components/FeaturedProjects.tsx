@@ -31,6 +31,11 @@ const languageColors: Record<string, string> = {
   PHP: "#4F5D95",
   HTML: "#e34c26",
   CSS: "#563d7c",
+  Dart: "#00B4AB",
+  "C#": "#178600",
+  R: "#198CE7",
+  Perl: "#0673A0",
+  Shell: "#89e051",
 };
 
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {

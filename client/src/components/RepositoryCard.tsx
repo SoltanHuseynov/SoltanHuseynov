@@ -21,6 +21,8 @@ const languageColors: Record<string, string> = {
   Shell: "#89e051",
   Vue: "#41b883",
   Dart: "#00B4AB",
+  R: "#198CE7",
+  Perl: "#0673A0",
 };
 
 interface RepositoryCardProps {
