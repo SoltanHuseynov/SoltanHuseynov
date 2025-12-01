@@ -74,5 +74,16 @@ export async function registerRoutes(
     }
   });
 
+  app.get("/api/github/orgs", async (_req, res) => {
+    try {
+      const octokit = await getUncachableGitHubClient();
+      const { data } = await octokit.rest.orgs.listForAuthenticatedUser();
+      res.json(data);
+    } catch (error) {
+      console.error("Error fetching GitHub orgs:", error);
+      res.status(500).json({ error: "Failed to fetch GitHub organizations" });
+    }
+  });
+
   return httpServer;
 }

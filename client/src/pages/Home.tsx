@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
+import { OrganizationsSection } from "@/components/OrganizationsSection";
 import { RepositoriesSection } from "@/components/RepositoriesSection";
 import { Footer } from "@/components/Footer";
 
@@ -24,6 +25,14 @@ interface GitHubRepo {
   updated_at: string;
 }
 
+interface GitHubOrg {
+  id: number;
+  login: string;
+  avatar_url: string;
+  description: string | null;
+  url: string;
+}
+
 export default function Home() {
   const { data: user, isLoading: userLoading } = useQuery<GitHubUser>({
     queryKey: ["/api/github/user"],
@@ -31,6 +40,10 @@ export default function Home() {
 
   const { data: repos, isLoading: reposLoading } = useQuery<GitHubRepo[]>({
     queryKey: ["/api/github/repos"],
+  });
+
+  const { data: orgs, isLoading: orgsLoading } = useQuery<GitHubOrg[]>({
+    queryKey: ["/api/github/orgs"],
   });
 
   const displayName = user?.name || user?.login || "Developer";
@@ -66,6 +79,11 @@ export default function Home() {
             "Git",
             "Docker",
           ]}
+        />
+
+        <OrganizationsSection
+          organizations={orgs || []}
+          isLoading={orgsLoading}
         />
 
         <RepositoriesSection
