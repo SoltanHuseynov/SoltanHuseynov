@@ -2,13 +2,101 @@ import { ModernHeader } from "@/components/ModernHeader";
 import { ModernHero } from "@/components/ModernHero";
 import { ModernAbout } from "@/components/ModernAbout";
 import { SkillsSection } from "@/components/SkillsSection";
+import { FeaturedProjects } from "@/components/FeaturedProjects";
+import { OrganizationsSection } from "@/components/OrganizationsSection";
 import { TimelineSection } from "@/components/TimelineSection";
 import { ContactSection } from "@/components/ContactSection";
 import { ModernFooter } from "@/components/ModernFooter";
 
+interface FeaturedProject {
+  id: number;
+  name: string;
+  description: string;
+  language: string | null;
+  stars: number;
+  forks: number;
+  url: string;
+  topics?: string[];
+}
+
+interface Organization {
+  id: number;
+  login: string;
+  avatar_url: string;
+  description: string | null;
+  url: string;
+}
+
 export default function Home() {
   const displayName = "Sultan Huseynov";
   const githubUrl = "https://github.com/SoltanHuseynov";
+
+  const staticProjects: FeaturedProject[] = [
+    {
+      id: 1,
+      name: "Portfolio Website",
+      description: "Müasir portfolio websaytı - React, TypeScript, Tailwind CSS",
+      language: "TypeScript",
+      stars: 15,
+      forks: 3,
+      url: "https://github.com/SoltanHuseynov/portfolio",
+      topics: ["react", "typescript", "portfolio"],
+    },
+    {
+      id: 2,
+      name: "Mobile App",
+      description: "React Native ilə yazılmış mobil tətbiq",
+      language: "JavaScript",
+      stars: 8,
+      forks: 2,
+      url: "https://github.com/SoltanHuseynov/mobile-app",
+      topics: ["react-native", "mobile", "javascript"],
+    },
+    {
+      id: 3,
+      name: "API Backend",
+      description: "Node.js və Express ilə hazırlanmış REST API",
+      language: "JavaScript",
+      stars: 12,
+      forks: 4,
+      url: "https://github.com/SoltanHuseynov/api-backend",
+      topics: ["nodejs", "express", "api"],
+    },
+    {
+      id: 4,
+      name: "Database Manager",
+      description: "PostgreSQL və MongoDB üçün verilənlər bazası idarəçi",
+      language: "Python",
+      stars: 6,
+      forks: 1,
+      url: "https://github.com/SoltanHuseynov/db-manager",
+      topics: ["database", "python", "postgresql"],
+    },
+  ];
+
+  const staticOrganizations: Organization[] = [
+    {
+      id: 1,
+      login: "AzerbaijanDevelopers",
+      avatar_url: "https://avatars.githubusercontent.com/u/12345?v=4",
+      description: "Azərbaycan proqramçılarının birliyinin qrupu",
+      url: "https://github.com/AzerbaijanDevelopers",
+    },
+    {
+      id: 2,
+      login: "OpenSourceAZ",
+      avatar_url: "https://avatars.githubusercontent.com/u/12346?v=4",
+      description: "Açıq mənbə layihələr toplusu",
+      url: "https://github.com/OpenSourceAZ",
+    },
+    {
+      id: 3,
+      login: "TechInnovation",
+      avatar_url: "https://avatars.githubusercontent.com/u/12347?v=4",
+      description: "Texnoloji innovasiyası üzrə qrupu",
+      url: "https://github.com/TechInnovation",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -75,6 +163,10 @@ export default function Home() {
             { name: "AWS", level: 70, color: "#FF9900" },
           ]}
         />
+
+        <FeaturedProjects projects={staticProjects} />
+
+        <OrganizationsSection organizations={staticOrganizations} />
 
         <TimelineSection />
 
