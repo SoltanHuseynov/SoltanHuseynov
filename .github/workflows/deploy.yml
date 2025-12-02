@@ -1,49 +1,33 @@
-name: Deploy Portfolio to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]   # Push to main triggers deploy
-  workflow_dispatch:    # Allow manual trigger
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '24'
           cache: 'npm'
 
-      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build project
       - name: Build project
         run: npm run build
 
-      # Step 5: Verify dist/public/index.html exists
-      - name: Check build output
-        run: |
-          if [ ! -f dist/public/index.html ]; then
-            echo "❌ dist/public/index.html not found! Build failed."
-            exit 1
-          else
-            echo "✅ index.html found!"
-          fi
-
-      # Step 6: Deploy to gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Add your personal access token to repo secrets
-          publish_dir: ./dist/public           # Folder containing index.html
+          github_token: ${{ secrets.GITHUB_TOKEN }} # use personal token
+          publish_dir: ./dist/public
           publish_branch: gh-pages
           enable_jekyll: false
