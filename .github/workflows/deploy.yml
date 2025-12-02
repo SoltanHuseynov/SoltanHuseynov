@@ -23,17 +23,10 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Copy dist/public/* into a folder called "site"
-      - name: Prepare site folder
-        run: |
-          mkdir site
-          cp -r dist/public/* site/
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          publish_branch: main
-          destination_dir: ./
+          publish_dir: ./dist   # point to your actual build folder
+          publish_branch: gh-pages
           enable_jekyll: false
