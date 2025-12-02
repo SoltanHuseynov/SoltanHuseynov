@@ -43,7 +43,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GH_TOKEN }}  # Add your personal access token to repo secrets
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Add your personal access token to repo secrets
           publish_dir: ./dist/public           # Folder containing index.html
           publish_branch: gh-pages
           enable_jekyll: false
