@@ -46,7 +46,7 @@ export function ContactSection() {
             Əlaqə
           </h2>
           <p className="text-muted-foreground text-lg mb-12 text-center max-w-2xl mx-auto">
-            Layihəniz var və ya əməkdaşlıq etmək istəyirsiniz? Sizdən eşitməkdən məmnun olaram.
+            Əgər yeni layihə planlaşdırırsınızsa və ya əməkdaşlıq təklifiniz varsa, sizinlə əlaqə qurmaqdan məmnun olaram.
           </p>
         </AnimatedSection>
 

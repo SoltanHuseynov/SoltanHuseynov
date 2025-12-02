@@ -41,7 +41,7 @@ const languageColors: Record<string, string> = {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   if (projects.length === 0) return null;
 
-  const topProjects = projects.slice(0, 4);
+  const topProjects = projects.slice(0, FeaturedProjects.name.length);
 
   return (
     <section className="py-16 md:py-24 px-6 md:px-8" id="featured" data-testid="section-featured">
@@ -51,7 +51,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
             Seçilmiş Layihələr
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            Ən populyar repozitoriyalarım və fəxr etdiyim layihələrdən seçmələr.
+            Üzərində çalışdığım və icma tərəfindən maraqla qarşılanan layihələrdən seçmələr.
           </p>
         </AnimatedSection>
 

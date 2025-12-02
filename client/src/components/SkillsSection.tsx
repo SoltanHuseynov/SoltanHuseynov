@@ -31,7 +31,7 @@ export function SkillsSection({ skills = defaultSkills }: SkillsSectionProps) {
             Bacarıqlar və Təcrübə
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-2xl">
-            İşlədiyim texnologiyalar və hər birindəki səviyyəm.
+            İşlədiyim texnologiyalar.
           </p>
         </AnimatedSection>
 

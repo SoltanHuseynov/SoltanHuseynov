@@ -28,86 +28,106 @@ interface Organization {
 }
 
 export default function Home() {
-  const displayName = "Sultan Huseynov";
+  const displayName = "Soltan Huseynov";
   const githubUrl = "https://github.com/SoltanHuseynov";
 
   const staticProjects: FeaturedProject[] = [
     {
       id: 1,
-      name: "Portfolio Website",
-      description: "Müasir portfolio websaytı - React, TypeScript, Tailwind CSS",
-      language: "TypeScript",
-      stars: 15,
-      forks: 3,
-      url: "https://github.com/SoltanHuseynov/portfolio",
-      topics: ["react", "typescript", "portfolio"],
+      name: "Android Mobile Moderin Calculator",
+      description: "Bu, sadə bir kalkulyator tətbiqidir. Və yalnız bir səhifəsi var və bir çox funksiyası yoxdur.",
+      language: "Dart",
+      stars: 2,
+      forks: 1,
+      url: "https://github.com/SoltanHuseynov/mobile-calculator",
+      topics: ["Dart", "Flutter"],
     },
     {
       id: 2,
-      name: "Mobile App",
-      description: "React Native ilə yazılmış mobil tətbiq",
-      language: "JavaScript",
-      stars: 8,
-      forks: 2,
-      url: "https://github.com/SoltanHuseynov/mobile-app",
-      topics: ["react-native", "mobile", "javascript"],
+      name: "Data Mining",
+      description: "R dili ilə yazılmış məlumat madenciliyi",
+      language: "R",
+      stars: 2,
+      forks: 0,
+      url: "https://github.com/SoltanHuseynov/Data-mining-",
+      topics: ["R"],
     },
     {
       id: 3,
-      name: "API Backend",
-      description: "Node.js və Express ilə hazırlanmış REST API",
+      name: "Dynamic Web",
+      description: "Node.js və Express ilə hazırlanmış Dinamik Veb",
       language: "JavaScript",
-      stars: 12,
-      forks: 4,
-      url: "https://github.com/SoltanHuseynov/api-backend",
-      topics: ["nodejs", "express", "api"],
+      stars: 2,
+      forks: 0,
+      url: "https://github.com/SoltanHuseynov/DynamicWeb",
+      topics: ["nodejs", "express","Firebase","jquery"],
     },
     {
       id: 4,
-      name: "Database Manager",
-      description: "PostgreSQL və MongoDB üçün verilənlər bazası idarəçi",
+      name: "Zombie Game",
+      description: "Python ilə hazırlanmış 2D oyun",
       language: "Python",
-      stars: 6,
-      forks: 1,
-      url: "https://github.com/SoltanHuseynov/db-manager",
-      topics: ["database", "python", "postgresql"],
+      stars: 2,
+      forks: 0,
+      url: "https://github.com/SoltanHuseynov/ZombieGame-part1",
+      topics: ["python", "Pygame"],
+    },
+    {
+      id: 5,
+      name: "Delivery Mobile app",
+      description: "Real vaxt sifariş qəbulu və menyu göstərilməsi,Restoran üçün iş prosesini optimallaşdıran həll",
+      language: "Dart",
+      stars: 2,
+      forks: 0,
+      url: "https://github.com/ManqalDoner/delivery-mobile-app",
+      topics: ["Dart", "Flutter","Supabase"],
+    },
+    {
+      id: 6,
+      name: "Delivery Mobile App Admin Panel",
+      description: "sifariş qəbulu gostergesi",
+      language: "Dart",
+      stars: 2,
+      forks: 0,
+      url: "https://github.com/ManqalAdminPanel/admin-dashboard",
+      topics: ["Dart", "Flutter","Supabase","JavaScript"],
     },
   ];
 
   const staticOrganizations: Organization[] = [
     {
       id: 1,
-      login: "AzerbaijanDevelopers",
-      avatar_url: "https://avatars.githubusercontent.com/u/12345?v=4",
-      description: "Azərbaycan proqramçılarının birliyinin qrupu",
-      url: "https://github.com/AzerbaijanDevelopers",
+      login: "ManqalAdminPanel",
+      avatar_url: "https://avatars.githubusercontent.com/u/242823854?s=200&v=4",
+      description: "Restoran üçün iş prosesini optimallaşdıran həll",
+      url: "https://github.com/ManqalAdminPanel",
     },
     {
       id: 2,
-      login: "OpenSourceAZ",
-      avatar_url: "https://avatars.githubusercontent.com/u/12346?v=4",
-      description: "Açıq mənbə layihələr toplusu",
-      url: "https://github.com/OpenSourceAZ",
+      login: "Manqal Doner",
+      avatar_url: "https://avatars.githubusercontent.com/u/241851765?s=200&v=4",
+      description: "Android üçün onlayn restoran mobil tətbiqi.",
+      url: "https://github.com/ManqalDoner",
     },
     {
       id: 3,
-      login: "TechInnovation",
-      avatar_url: "https://avatars.githubusercontent.com/u/12347?v=4",
-      description: "Texnoloji innovasiyası üzrə qrupu",
-      url: "https://github.com/TechInnovation",
+      login: "Note C",
+      avatar_url: "https://avatars.githubusercontent.com/u/112772910?s=200&v=4",
+      description: "Açıq Mənbə 🤖Notec tətbiq və icmadır.",
+      url: "https://github.com/Note-C",
     },
   ];
-
   return (
     <div className="min-h-screen bg-background">
       <ModernHeader name={displayName} />
-
+     
       <main>
         <ModernHero
+         // it is title section on web and fetch to github user
           name={displayName}
-          title="Full-Stack Proqramçı"
-          tagline="Mürəkkəb problemlərə zərif həllər yaradıram. Müasir texnologiyalarla miqyaslana bilən veb tətbiqlər qurmaqda ixtisaslaşmışam."
-          avatarUrl="https://avatars.githubusercontent.com/u/12345?v=4"
+          title="İT Mütəxəssisi"
+          tagline="Mürəkkəb problemlərə zərif həllər yaradıram. Müasir texnologiyalarla miqyaslana bilən tətbiqlər qurmaqda ixtisaslaşmışam."
+          avatarUrl="https://avatars.githubusercontent.com/u/64208693?v=4"
           githubUrl={githubUrl}
           linkedinUrl="https://www.linkedin.com/in/soltanhuseynov/"
           email="sultan.huseynov20@gmail.com"
@@ -115,9 +135,11 @@ export default function Home() {
 
         <ModernAbout
           bio={[
-            "Mən gözəl, funksional və istifadəçi yönümlü rəqəmsal təcrübələr yaratmağı sevən həvəsli bir full-stack proqramçıyam. Frontend və backend texnologiyalarında təcrübəm var, fikirləri təmiz və səmərəli kodla həyata keçirirəm.",
-            "Mən mobil tətbiqlərin inkişafı, proqram mühəndisliyi, sistem administrasiyası və texniki dəstəkdə praktik təcrübəsi olan IT mütəxəssisisiyəm. Real layihələrdə işləmək, API inteqrasiyası, verilənlər bazasının idarə edilməsi və UI/UX prinsiplərinə uyğun tətbiqlərin inkişafı üçün lazımi bacarıqlara sahibəm.",
-            "Qrupla işləmə, analitik düşüncə və operativ problemlərin həlli ilə dəyər yaradan nəticələrə fokus edirəm. Kod yazmadığım zaman, yeni texnologiyaları araşdırır, açıq mənbə layihələrinə töhfə verir və ya proqramçı icması ilə bilik paylaşıram. Həmişə yeni çağırışları qəbul etməyə və mümkün olanın sərhədlərini genişləndirməyə həvəsliyəm.",
+            `
+             Salam! Mən Soltan Hüseynov, 24 yaşındayam və Bilecik Universitetində İnformasiya Sistemləri üzrə təhsil almışam.
+             Son 5 il ərzində kod yazmaq, mobil və veb tətbiqlər inkişaf etdirmək, help desk və sistem inzibatçılığı sahələrində praktiki təcrübə qazanmışam. 
+             Komanda işi, analitik düşüncə və operativ problem həll etmə bacarıqlarımla dəyər yaradan layihələr üzərində işləyirəm.
+            `
           ]}
           skills={[
             "JavaScript",

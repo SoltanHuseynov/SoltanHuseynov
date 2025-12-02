@@ -34,6 +34,12 @@ const defaultTimeline: TimelineItem[] = [
     description: "Proqram təminatı inkişafında peşəkar yolçuluğuma başladım, frontend texnologiyalarına fokuslandım.",
     icon: "work",
   },
+  {
+    year: "2020",
+    title: "Fundamental Biliklər",
+    description: "Algoritmlər, məlumat strukturları və veb əsaslarını öyrənərək peşəkar inkişaf yoluna hazırlaşdım.",
+    icon:"education"
+  },
 ];
 
 const iconMap = {
@@ -56,7 +62,7 @@ export function TimelineSection({ timeline = defaultTimeline }: TimelineSectionP
             Mənim Yolçuluğum
           </h2>
           <p className="text-muted-foreground text-lg mb-12 text-center max-w-2xl mx-auto">
-            Peşəkar inkişafım və əsas nailiyyətlərimin xronologiyası.
+            
           </p>
         </AnimatedSection>
 
