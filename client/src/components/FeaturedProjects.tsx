@@ -41,7 +41,7 @@ const languageColors: Record<string, string> = {
 export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   if (projects.length === 0) return null;
 
-  const topProjects = projects.slice(0, FeaturedProjects.name.length);
+  const topProjects = projects.slice(0, projects.length);
 
   return (
     <section className="py-16 md:py-24 px-6 md:px-8" id="featured" data-testid="section-featured">
