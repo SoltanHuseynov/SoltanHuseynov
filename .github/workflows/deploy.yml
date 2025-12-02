@@ -2,8 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build-and-deploy:
@@ -16,17 +17,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '24'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./dist   # point to your actual build folder
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
           publish_branch: gh-pages
-          enable_jekyll: false
