@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '24'
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
@@ -24,11 +23,17 @@ jobs:
       - name: Build project
         run: npm run build
 
+      # Copy dist/public/* into a folder called "site"
+      - name: Prepare site folder
+        run: |
+          mkdir site
+          cp -r dist/public/* site/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public
-          publish_branch:  gh-pages
+          publish_dir: ./site
+          publish_branch: main
           destination_dir: ./
           enable_jekyll: false
