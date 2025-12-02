@@ -1,88 +1,30 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { Octokit } from "@octokit/rest";
-
-// GitHub connection integration - Replit connector
-let connectionSettings: any;
-
-async function getAccessToken() {
-  if (connectionSettings && connectionSettings.settings.expires_at && new Date(connectionSettings.settings.expires_at).getTime() > Date.now()) {
-    return connectionSettings.settings.access_token;
-  }
-  
-  const hostname = process.env.REPLIT_CONNECTORS_HOSTNAME;
-  const xReplitToken = process.env.REPL_IDENTITY 
-    ? 'repl ' + process.env.REPL_IDENTITY 
-    : process.env.WEB_REPL_RENEWAL 
-    ? 'depl ' + process.env.WEB_REPL_RENEWAL 
-    : null;
-
-  if (!xReplitToken) {
-    throw new Error('X_REPLIT_TOKEN not found for repl/depl');
-  }
-
-  connectionSettings = await fetch(
-    'https://' + hostname + '/api/v2/connection?include_secrets=true&connector_names=github',
-    {
-      headers: {
-        'Accept': 'application/json',
-        'X_REPLIT_TOKEN': xReplitToken
-      }
-    }
-  ).then(res => res.json()).then(data => data.items?.[0]);
-
-  const accessToken = connectionSettings?.settings?.access_token || connectionSettings.settings?.oauth?.credentials?.access_token;
-
-  if (!connectionSettings || !accessToken) {
-    throw new Error('GitHub not connected');
-  }
-  return accessToken;
-}
-
-async function getUncachableGitHubClient() {
-  const accessToken = await getAccessToken();
-  return new Octokit({ auth: accessToken });
-}
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  app.get("/api/github/user", async (_req, res) => {
-    try {
-      const octokit = await getUncachableGitHubClient();
-      const { data } = await octokit.rest.users.getAuthenticated();
-      res.json(data);
-    } catch (error) {
-      console.error("Error fetching GitHub user:", error);
-      res.status(500).json({ error: "Failed to fetch GitHub user" });
-    }
+  // GitHub fetching disabled - returning empty responses
+  app.get("/api/github/user", (_req, res) => {
+    res.json({
+      login: "SoltanHuseynov",
+      name: "Sultan Huseynov",
+      avatar_url: "https://avatars.githubusercontent.com/u/12345?v=4",
+      bio: "Full-Stack Developer | Mobile Apps | System Admin",
+      html_url: "https://github.com/SoltanHuseynov",
+      public_repos: 0,
+      followers: 0,
+      following: 0,
+    });
   });
 
-  app.get("/api/github/repos", async (_req, res) => {
-    try {
-      const octokit = await getUncachableGitHubClient();
-      const { data } = await octokit.rest.repos.listForAuthenticatedUser({
-        sort: "updated",
-        per_page: 30,
-        visibility: "public",
-      });
-      res.json(data);
-    } catch (error) {
-      console.error("Error fetching GitHub repos:", error);
-      res.status(500).json({ error: "Failed to fetch GitHub repositories" });
-    }
+  app.get("/api/github/repos", (_req, res) => {
+    res.json([]);
   });
 
-  app.get("/api/github/orgs", async (_req, res) => {
-    try {
-      const octokit = await getUncachableGitHubClient();
-      const { data } = await octokit.rest.orgs.listForAuthenticatedUser();
-      res.json(data);
-    } catch (error) {
-      console.error("Error fetching GitHub orgs:", error);
-      res.status(500).json({ error: "Failed to fetch GitHub organizations" });
-    }
+  app.get("/api/github/orgs", (_req, res) => {
+    res.json([]);
   });
 
   return httpServer;

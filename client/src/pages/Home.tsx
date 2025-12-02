@@ -1,80 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
 import { ModernHeader } from "@/components/ModernHeader";
 import { ModernHero } from "@/components/ModernHero";
 import { ModernAbout } from "@/components/ModernAbout";
-import { StatsSection } from "@/components/StatsSection";
 import { SkillsSection } from "@/components/SkillsSection";
-import { OrganizationsSection } from "@/components/OrganizationsSection";
-import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { RepositoriesSection } from "@/components/RepositoriesSection";
 import { TimelineSection } from "@/components/TimelineSection";
 import { ContactSection } from "@/components/ContactSection";
 import { ModernFooter } from "@/components/ModernFooter";
 
-interface GitHubUser {
-  login: string;
-  name: string | null;
-  avatar_url: string;
-  bio: string | null;
-  html_url: string;
-  public_repos: number;
-  followers: number;
-  following: number;
-}
-
-interface GitHubRepo {
-  id: number;
-  name: string;
-  description: string | null;
-  language: string | null;
-  stargazers_count: number;
-  forks_count: number;
-  html_url: string;
-  updated_at: string;
-  topics?: string[];
-}
-
-interface GitHubOrg {
-  id: number;
-  login: string;
-  avatar_url: string;
-  description: string | null;
-  url: string;
-}
-
 export default function Home() {
-  const { data: user } = useQuery<GitHubUser>({
-    queryKey: ["/api/github/user"],
-  });
-
-  const { data: repos, isLoading: reposLoading } = useQuery<GitHubRepo[]>({
-    queryKey: ["/api/github/repos"],
-  });
-
-  const { data: orgs, isLoading: orgsLoading } = useQuery<GitHubOrg[]>({
-    queryKey: ["/api/github/orgs"],
-  });
-
-  const displayName = user?.name || user?.login || "Proqramçı";
-  const githubUrl = user?.html_url || "https://github.com";
-
-  const totalStars = repos?.reduce((acc, repo) => acc + repo.stargazers_count, 0) || 0;
-  const languageSet = new Set(repos?.map((r) => r.language).filter((l): l is string => l !== null) || []);
-  const languages = Array.from(languageSet);
-
-  const featuredProjects = repos
-    ?.sort((a, b) => b.stargazers_count - a.stargazers_count)
-    .slice(0, 4)
-    .map((repo) => ({
-      id: repo.id,
-      name: repo.name,
-      description: repo.description || "Təsvir mövcud deyil",
-      language: repo.language,
-      stars: repo.stargazers_count,
-      forks: repo.forks_count,
-      url: repo.html_url,
-      topics: repo.topics,
-    })) || [];
+  const displayName = "Sultan Huseynov";
+  const githubUrl = "https://github.com/SoltanHuseynov";
 
   return (
     <div className="min-h-screen bg-background">
@@ -84,21 +18,11 @@ export default function Home() {
         <ModernHero
           name={displayName}
           title="Full-Stack Proqramçı"
-          tagline={
-            user?.bio ||
-            "Mürəkkəb problemlərə zərif həllər yaradıram. Müasir texnologiyalarla miqyaslana bilən veb tətbiqlər qurmaqda ixtisaslaşmışam."
-          }
-          avatarUrl={user?.avatar_url}
+          tagline="Mürəkkəb problemlərə zərif həllər yaradıram. Müasir texnologiyalarla miqyaslana bilən veb tətbiqlər qurmaqda ixtisaslaşmışam."
+          avatarUrl="https://avatars.githubusercontent.com/u/12345?v=4"
           githubUrl={githubUrl}
           linkedinUrl="https://www.linkedin.com/in/soltanhuseynov/"
           email="sultan.huseynov20@gmail.com"
-        />
-
-        <StatsSection
-          totalRepos={repos?.length || 0}
-          totalStars={totalStars}
-          totalOrgs={orgs?.length || 0}
-          languages={languages}
         />
 
         <ModernAbout
@@ -143,25 +67,13 @@ export default function Home() {
             { name: "PHP", level: 68, color: "#4F5D95" },
             { name: "R", level: 65, color: "#198CE7" },
             { name: "Perl", level: 60, color: "#0673A0" },
-            { name: "Shell", level: 80, color: "#89e051" },
-            { name: "PostgreSQL & MongoDB", level: 82, color: "#336791" },
-            { name: "Supabase", level: 80, color: "#3ECF8E" },
-            { name: "Docker & DevOps", level: 70, color: "#2496ed" },
-            { name: "Bulud Xidmətləri (AWS)", level: 72, color: "#FF9900" },
-            { name: "UI/UX Dizayn", level: 75, color: "#FF61F6" },
+            { name: "Shell", level: 62, color: "#4EAA25" },
+            { name: "PostgreSQL", level: 85, color: "#336791" },
+            { name: "MongoDB", level: 80, color: "#00ed64" },
+            { name: "Supabase", level: 82, color: "#3fcf8e" },
+            { name: "Docker", level: 75, color: "#2496ed" },
+            { name: "AWS", level: 70, color: "#FF9900" },
           ]}
-        />
-
-        <OrganizationsSection
-          organizations={orgs || []}
-          isLoading={orgsLoading}
-        />
-
-        <FeaturedProjects projects={featuredProjects} />
-
-        <RepositoriesSection
-          repositories={repos || []}
-          isLoading={reposLoading}
         />
 
         <TimelineSection />
