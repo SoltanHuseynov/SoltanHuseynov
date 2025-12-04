@@ -70,9 +70,9 @@ export function ModernAbout({ bio, skills }: ModernAboutProps) {
             >
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  { label: "Təcrübə İli", value: "4+" },
+                  { label: "Təcrübə İli", value: "5+" },
                   { label: "Tamamlanmış Layihələr", value: "50+" },
-                  { label: "Məmnun Müştərilər", value: "30+" },
+                  { label: "Məmnun Müştərilər", value: "10+" },
                 ].map((stat, index) => (
                   <div key={stat.label} className="text-center p-4 rounded-xl bg-muted/50">
                     <div className="text-3xl font-bold text-primary">{stat.value}</div>
